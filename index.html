@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>직업,학교,학과 정보통</title>
+    <!-- Add some CSS to change client UI -->
+    <style>
+    body {
+        background-color: #FFFFFF;
+        }
+    label{
+        color: #5858FA;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 40px;
+        }
+    <!--  input {
+        color: #232F3E;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 20px;
+        } -->
+    </style>
+    <script>
+	
+		
+        // define the callAPI function that takes a first name and last name as parameters
+        var callAPI = ()=>{
+            // instantiate a headers object
+            
+            // add content type header to object
+            
+            // using built in JSON utility package turn object to string and store in a variable
+            
+            // create a JSON object with parameters for API call and store in a variable
+            var requestOptions = {
+                method: 'GET',
+                
+                
+            };
+            // make API call with parameters and use promises to get response
+            fetch("http://openapi.seoul.go.kr:8088/714d6f46736368653530784b645049/json/NowonNewsGosiList/1/10/",requestOptions)
+            .then(response => response.json())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+        }
+    </script>
+</head>
+<header>
+</header>
+<body>
+
+	<h1>직업,학교,학과 정보통 <p style="float:right">코로나 정보보보ㅗ보봅보ㅗ</p></h1>
+	
+<div style="position: relative;">
+	<image src="https://2020-iot-lab23.s3.ap-northeast-2.amazonaws.com/%EB%85%B8%EC%9B%90.jpg" alt="mimg" width="100%" height="700px">
+	<div style="left: 40%; width: 50%; bottom: 340px; font-size: 5.0em; font-weight: bold; position: absolute;">
+
+		<font color="white">직업,학교,학과 정보통</font>
+
+	</div>
+</div>
+
+
+<button type="button" onclick="callAPI()" style="width:32%; height:200px; background-color:#A9BCF5">직업 정보 -></button>
+<button type="button" onClick="window.open('schoolInfo.html')" style="width:32%; height:200px; background-color:#5882FA" >학교 정보 -></button>
+<button type="button" onClick="window.open('deptInfo.html')"style="width:32%; height:200px; background-color:#D0F5A9">학과 정보 -></button>
+<!-- <button onclick="document.write('HTML출력')">click</button> -->
+
+<!-- <div style="width:100px; height:100px; background-color:#CF0">두번째 영역
+</div> -->
+
+<!-- <input type="button" value="2">
+<input type="button" value="3"> -->
+
+<!-- <div style="width:100%; height:70%; background-color:#CF0">두번째 영역</div> -->
+    <!-- <form> -->
+        <!-- <label>First Name :</label> -->
+        <!-- <input type="text" id="fName"> -->
+        <!-- <label>Last Name :</label> -->
+        <!-- <input type="text" id="lName"> -->
+        <!-- set button onClick method to call function we defined passing input values as parameters -->
+       <!--  <button type="button" onclick="callAPI(document.getElementById('fName').value,document.getElementById('lName').value)">Call API</button> -->
+    <!-- </form> -->
+</body>
+</html>
